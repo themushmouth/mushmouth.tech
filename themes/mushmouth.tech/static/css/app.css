@@ -1,0 +1,338 @@
+/*!
+ * Theme for mushmouth.tech
+ *
+ * Built by resir014 <https://resir014.xyz>
+ * Licensed under MIT.
+ */
+
+/* TODO: Remove theme. Combine the SCSS I left at the work laptop. */
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root {
+    --body-bg: #f5f8fa;
+
+    /* Borders */
+    --border-color: #dcdfe1; /* darken(var(--body-bg), 10%) */
+    --list-group-border: var(--border-color);
+    --navbar-default-border: var(--border-color);
+    --panel-default-border: var(--border-color);
+    --panel-inner-border: var(--border-color);
+
+    /* Brands */
+    --brand-primary: #3097D1;
+    --brand-info: #8eb4cb;
+    --brand-success: #2ab27b;
+    --brand-warning: #cbb956;
+    --brand-danger: #bf5329;
+
+    /* Typography */
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    --text-color: #636b6f;
+
+    /* Navbar */
+    --navbar-default-body: #fff;
+    --navbar-default-bg: #000;
+
+    /* Buttons */
+    --btn-default-color: --text-color;
+
+    /* Inputs */
+    --input-border: lighten(--text-color, 40%);
+    --input-border-focus: lighten(--brand-primary, 25%);
+    --input-color-placeholder: lighten(--text-color, 30%);
+
+    /* Panels */
+    --panel-default-heading-bg: #fff;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Apply the box-sizing reset.
+ */
+
+html {
+    box-sizing: border-box; /* 1 */
+}
+
+* {
+    box-sizing: inherit; /* 1 */
+}
+
+/* Remove default margin. */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--font-family-sans-serif);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--body-bg);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* No `:visited` state is required by default (browsers will use `a`) */
+
+a {
+    color: #268bd2;
+    text-decoration: none;
+}
+a strong {
+    color: inherit;
+}
+
+/* `:focus` is linked to `:hover` for basic accessibility */
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .5rem;
+    font-weight: bold;
+    line-height: 1.25;
+    color: #313131;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+h4,
+h5,
+h6 {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+/* Body text */
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+strong {
+    color: #303030;
+}
+
+/* Lists */
+
+ul,
+ol,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: .5rem;
+}
+
+/* Misc */
+
+hr {
+    position: relative;
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #fff;
+}
+
+abbr {
+    font-size: 85%;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+}
+
+abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted #e5e5e5;
+}
+
+/* Code */
+
+code,
+pre {
+    font-family: Menlo, Monaco, "Consolas", "Courier New", monospace;
+}
+
+code {
+    padding: .25em .5em;
+    font-size: 85%;
+    color: #bf616a;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+
+pre {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: .8rem;
+    line-height: 1.4;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f9f9f9;
+}
+
+pre code {
+    padding: 0;
+    font-size: 100%;
+    color: inherit;
+    background-color: transparent;
+}
+
+/* Quotes */
+
+blockquote {
+    padding: .5rem 1rem;
+    margin: .8rem 0;
+    color: #7a7a7a;
+    border-left: .25rem solid #e5e5e5;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 30em) {
+    blockquote {
+        padding-right: 5rem;
+        padding-left: 1.25rem;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1rem;
+    border-radius: 5px;
+}
+
+/* Tables */
+
+table {
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: .25rem .5rem;
+    border: 1px solid #e5e5e5;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+    background-color: #f9f9f9;
+}
+
+/**
+ * Extend paragraphs with `.lead` for larger introductory text.
+ */
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    min-height: 60px;
+    grid-column: span 12;
+    background-color: var(--navbar-default-bg);
+    color: var(--navbar-default-body);
+}
+
+.content {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    grid-column: span 12;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* Header
+   ========================================================================== */
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu {
+    /* */
+}
+
+.header-menu__item {
+    /* */
+}
