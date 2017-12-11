@@ -1,0 +1,21 @@
+{
+  "name": "mushmouth.tech",
+  "version": "1.0.0",
+  "description": "Theme for mushmouth.tech",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "node-sass src/sass/app.scss --output static/css --output-style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/mushmouth/mushmouth.tech.git"
+  },
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/mushmouth/mushmouth.tech#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
