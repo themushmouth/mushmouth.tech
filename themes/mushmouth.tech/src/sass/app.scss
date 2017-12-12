@@ -3,4 +3,17 @@
 @import "base";
 @import "layout";
 
+@import "components/article";
+@import "components/blog-item-list";
+@import "components/blog-item";
+@import "components/computer-list";
+@import "components/computer";
+@import "components/footer";
 @import "components/header";
+@import "components/sidebar-widget";
+@import "components/sidebar";
+@import "components/welcome";
+
+@import "pages/home";
+@import "pages/posts";
+@import "pages/single";
