@@ -26,8 +26,27 @@ header {
     }
 }
 
-.grid-block {
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: $navbar-default-bg;
+    padding: 5px 0;
+    color: #fff;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    @supports (display: grid) {
+        grid-column: span 12;
+    }
+}
+
+.grid-container {
     padding: 20px;
+    max-width: $container-width-xl;
+    margin: 0 auto;
 
     @supports (display: grid) {
         display: grid;
