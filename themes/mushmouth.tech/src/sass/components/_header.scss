@@ -1,6 +1,16 @@
 .header-logo {
     display: flex;
     align-items: center;
+
+    &__link {
+        color: inherit;
+        font-weight: 600;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
 }
 
 .header-menu {
@@ -10,11 +20,12 @@
 
     &__item {
         padding: 0 20px;
-        line-height: 60px;
+        line-height: 40px;
         color: inherit;
+        font-weight: 300;
 
-        &::hover,
-        &::focus {
+        &:hover,
+        &:focus {
             color: inherit;
         }
     }

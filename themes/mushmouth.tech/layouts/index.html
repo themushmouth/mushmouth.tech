@@ -1,5 +1,36 @@
 {{ define "main" }}
-<div class="content">
-    <h1>content</h1>
+<div class="grid-block welcome">
+    <div class="welcome-bio">
+        <h1 class="welcome-bio__name">[Full Name]</h1>
+        <code>themushmouth@example.com</code>
+
+        <hr>
+
+        <p>More description about yourself, lorem ipsum dolor sit amet consectetur adipisicing elit and stuff like that.</p>
+
+        <div class="grid-block grid-block--gutterless welcome-bio-links">
+            <a class="welcome-bio-links__link" href="https://twitter.com/themushmouth">
+                <i data-feather="twitter"></i>
+                <p>Twitter</p>
+            </a>
+            <a class="welcome-bio-links__link" href="https://github.com/themushmouth">
+                <i data-feather="github"></i>
+                <p>GitHub</p>
+            </a>
+            <a class="welcome-bio-links__link" href="#">
+                <i data-feather="circle"></i>
+                <p>N/A</p>
+            </a>
+            <a class="welcome-bio-links__link" href="#">
+                <i data-feather="circle"></i>
+                <p>N/A</p>
+            </a>
+        </div>
+    </div>
+    <div class="welcome-photo">
+        <figure class="welcome-photo__avatar">
+            <img src="https://via.placeholder.com/600x600" alt="mushmouth">
+        </figure>
+    </div>
 </div>
 {{ end }}

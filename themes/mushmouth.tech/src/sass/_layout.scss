@@ -1,7 +1,9 @@
 #app {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+    }
 }
 
 .container {
@@ -15,16 +17,27 @@
 header {
     display: flex;
     flex-direction: row;
-    height: 60px;
-    grid-column: span 12;
-    background-color: #000;
+    height: 40px;
+    background-color: $navbar-default-bg;
     color: #fff;
+
+    @supports (display: grid) {
+        grid-column: span 12;
+    }
 }
 
-.content {
-    display: grid;
+.grid-block {
     padding: 20px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-    grid-column: span 12;
+
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        grid-column: span 12;
+    }
+
+    &--gutterless {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

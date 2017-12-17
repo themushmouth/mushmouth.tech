@@ -12,12 +12,13 @@
     </head>
     <body>
         {{ partial "header.html" . }}
-        <!-- Code that all your templates share, like a header -->
-        {{ block "main" . }}
-        <!-- The part of the page that begins to differ between templates -->
-        {{ end }}
-        {{ block "footer" . }}
-        <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-        {{ end }}
+
+        <main role="main" class="main">
+            {{ block "main" . }}
+            <!-- The part of the page that begins to differ between templates -->
+            {{ end }}
+        </main>
+
+        {{ partial "scripts.html" . }}
     </body>
 </html>
