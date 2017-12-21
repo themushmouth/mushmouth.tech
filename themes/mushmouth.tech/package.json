@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "node-sass src/sass/app.scss --output static/css --output-style compressed",
+    "build:css": "node-sass-chokidar src/sass/app.scss --output static/css --output-style compressed",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "node-sass src/sass/app.scss --watch src/sass/**/*.scss --output static/css --output-style compressed"
+    "watch": "node-sass-chokidar src/sass/app.scss --watch src/sass/**/*.scss --output static/css --output-style compressed"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,6 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/mushmouth/mushmouth.tech#readme",
   "devDependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass-chokidar": "0.0.3"
   }
 }
