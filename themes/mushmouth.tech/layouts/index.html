@@ -10,10 +10,17 @@
 
         <div class="grid-container grid-container--gutterless welcome-bio-links">
             {{ range .Param "accounts" }}
-                <a class="welcome-bio-links__link" href="{{ .url }}">
-                    <i data-feather="{{ .icon }}"></i>
-                    <p>{{ .name }}</p>
-                </a>
+                {{ if .url }}
+                    <a class="welcome-bio-links__link" href="{{ .url }}">
+                        <i data-feather="{{ .icon }}"></i>
+                        <p>{{ .name }}</p>
+                    </a>
+                {{ else }}
+                    <span class="welcome-bio-links__link">
+                        <i data-feather="{{ .icon }}"></i>
+                        <p>{{ .name }}</p>
+                    </span>
+                {{ end }}
             {{ end }}
         </div>
     </div>

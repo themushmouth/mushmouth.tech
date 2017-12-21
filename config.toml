@@ -18,3 +18,6 @@ theme = "mushmouth.tech"
         name = "BitBucket"
         icon = "git-branch"
         url = "https://bitbucket.org/mushmouth"
+    [[params.accounts]]
+        name = "FC: xxxx-xxxx-xxxx-xxxx"
+        icon = "crosshair"
