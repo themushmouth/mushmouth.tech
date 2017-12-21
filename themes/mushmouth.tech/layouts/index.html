@@ -9,22 +9,12 @@
         <p>"Oh hi, world." - Tommy Wiseau</p>
 
         <div class="grid-container grid-container--gutterless welcome-bio-links">
-            <a class="welcome-bio-links__link" href="https://twitter.com/themushmouth">
-                <i data-feather="twitter"></i>
-                <p>Twitter</p>
-            </a>
-            <a class="welcome-bio-links__link" href="https://github.com/themushmouth">
-                <i data-feather="github"></i>
-                <p>GitHub</p>
-            </a>
-            <a class="welcome-bio-links__link" href="#">
-                <i data-feather="circle"></i>
-                <p>N/A</p>
-            </a>
-            <a class="welcome-bio-links__link" href="#">
-                <i data-feather="circle"></i>
-                <p>N/A</p>
-            </a>
+            {{ range .Param "accounts" }}
+                <a class="welcome-bio-links__link" href="{{ .url }}">
+                    <i data-feather="{{ .icon }}"></i>
+                    <p>{{ .name }}</p>
+                </a>
+            {{ end }}
         </div>
     </div>
     <div class="welcome-photo">
