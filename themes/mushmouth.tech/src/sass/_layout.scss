@@ -29,8 +29,9 @@ header {
 footer {
     display: flex;
     flex-direction: row;
-    background-color: $navbar-default-bg;
     padding: 5px 0;
+    height: 30px;
+    background-color: $navbar-default-bg;
     color: #fff;
 
     a {

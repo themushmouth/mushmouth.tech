@@ -1,8 +1,8 @@
 .welcome {
     @supports (display: grid) {
         @media (min-width: $grid-breakpoint-md) {
-            // 80px = header height + container padding
-            grid-template-rows: calc(100vh - 80px);
+            // 110px = header height + container padding + footer height
+            grid-template-rows: calc(100vh - 110px);
         }
     }
 }
