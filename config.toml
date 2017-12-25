@@ -1,23 +1,22 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "mushmouth.tech"
-theme = "mushmouth.tech"
 
 [[menu.main]]
-    name = "blog"
-    weight = -110
-    identifier = "about"
-    url = "/blog/"
+  name = "blog"
+  weight = -110
+  identifier = "about"
+  url = "/blog/"
 
 [params]
-    [[params.accounts]]
-        name = "Twitter"
-        icon = "twitter"
-        url = "https://twitter.com/themushmouth"
-    [[params.accounts]]
-        name = "BitBucket"
-        icon = "git-branch"
-        url = "https://bitbucket.org/mushmouth"
-    [[params.accounts]]
-        name = "FC: xxxx-xxxx-xxxx-xxxx"
-        icon = "crosshair"
+  [[params.accounts]]
+    name = "Twitter"
+    icon = "twitter"
+    url = "https://twitter.com/themushmouth"
+  [[params.accounts]]
+    name = "BitBucket"
+    icon = "git-branch"
+    url = "https://bitbucket.org/mushmouth"
+  [[params.accounts]]
+    name = "FC: xxxx-xxxx-xxxx-xxxx"
+    icon = "crosshair"

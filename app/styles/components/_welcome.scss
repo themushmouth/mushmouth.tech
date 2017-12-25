@@ -1,0 +1,75 @@
+.welcome {
+  @supports (display: grid) {
+    @media (min-width: $grid-breakpoint-md) {
+      // 110px = header height + container padding + footer height
+      grid-template-rows: calc(100vh - 110px);
+    }
+  }
+}
+
+.welcome-bio {
+  @supports (display: grid) {
+    grid-column: span 12;
+
+    @media (min-width: $grid-breakpoint-md) {
+      grid-column: span 6;
+    }
+  }
+
+  &__name {
+    margin-top: 0;
+  }
+}
+
+.welcome-photo {
+  @supports (display: grid) {
+    grid-column: span 12;
+
+    @media (min-width: $grid-breakpoint-md) {
+      grid-column: span 6;
+    }
+  }
+
+  &__avatar {
+    height: 400px;
+    overflow: hidden;
+
+    img {
+      @media (min-width: $grid-breakpoint-md) {
+        max-height: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.welcome-bio-links {
+  &__link {
+    display: flex;
+    padding: 20px;
+    background-color: #f9f9fa;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: $color-white;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      display: inline-block;
+      margin: 0;
+      margin-left: 1rem;
+      line-height: 24px;
+    }
+
+    @supports (display: grid) {
+      grid-column: span 12;
+
+      @media (min-width: $grid-breakpoint-md) {
+        grid-column: span 6;
+      }
+    }
+  }
+}
