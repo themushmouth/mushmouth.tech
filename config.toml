@@ -14,9 +14,9 @@ title = "mushmouth.tech"
     icon = "twitter"
     url = "https://twitter.com/themushmouth"
   [[params.accounts]]
-    name = "BitBucket"
-    icon = "git-branch"
-    url = "https://bitbucket.org/mushmouth"
+    name = "GitHub"
+    icon = "github"
+    url = "https://github.com/themushmouth"
   [[params.accounts]]
     name = "FC: xxxx-xxxx-xxxx-xxxx"
     icon = "crosshair"
