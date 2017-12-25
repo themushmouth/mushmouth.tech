@@ -1,33 +1,36 @@
+{{ define "title" }}
+  {{ .Site.Title }}
+{{ end }}
 {{ define "main" }}
 <div class="grid-container welcome">
-    <div class="welcome-bio">
-        <h1 class="welcome-bio__name">Patrick McFarling</h1>
-        <code>me@mushmouth.tech</code>
+  <div class="welcome-bio">
+    <h1 class="welcome-bio__name">Patrick McFarling</h1>
+    <code>me@mushmouth.tech</code>
 
-        <hr>
+    <hr>
 
-        <p>"Oh hi, world." - Tommy Wiseau</p>
+    <p>"Oh hi, world." - Tommy Wiseau</p>
 
-        <div class="grid-container grid-container--gutterless welcome-bio-links">
-            {{ range .Param "accounts" }}
-                {{ if .url }}
-                    <a class="welcome-bio-links__link" href="{{ .url }}">
-                        <i data-feather="{{ .icon }}"></i>
-                        <p>{{ .name }}</p>
-                    </a>
-                {{ else }}
-                    <span class="welcome-bio-links__link">
-                        <i data-feather="{{ .icon }}"></i>
-                        <p>{{ .name }}</p>
-                    </span>
-                {{ end }}
-            {{ end }}
-        </div>
+    <div class="grid-container grid-container--gutterless welcome-bio-links">
+      {{ range .Param "accounts" }}
+        {{ if .url }}
+        <a class="welcome-bio-links__link" href="{{ .url }}">
+          <i data-feather="{{ .icon }}"></i>
+          <p>{{ .name }}</p>
+        </a>
+        {{ else }}
+        <span class="welcome-bio-links__link">
+          <i data-feather="{{ .icon }}"></i>
+          <p>{{ .name }}</p>
+        </span>
+        {{ end }}
+      {{ end }}
     </div>
-    <div class="welcome-photo">
-        <figure class="welcome-photo__avatar">
-            <img src="https://via.placeholder.com/600x600" alt="mushmouth">
-        </figure>
-    </div>
+  </div>
+  <div class="welcome-photo">
+    <figure class="welcome-photo__avatar">
+      <img src="https://via.placeholder.com/600x600" alt="mushmouth">
+    </figure>
+  </div>
 </div>
 {{ end }}

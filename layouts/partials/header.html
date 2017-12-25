@@ -1,19 +1,19 @@
 <header class="container">
-    <div class="header-logo">
-        <a class="header-logo__link" href="/">mushmouth.tech</a>
-    </div>
-    <div class="header-menu">
-        {{ $currentPage := . }}
-        {{ range .Site.Menus.main }}
-            {{ if .HasChildren }}
-                <a href="{{ .URL }}" class="header-menu__item{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
-                    {{ .Name }}
-                </a>
-            {{ else }}
-                <a href="{{ .URL }}" class="header-menu__item{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
-                    {{ .Name }}
-                </a>
-            {{ end }}
-        {{ end }}
-    </div>
+  <div class="header-logo">
+    <a class="header-logo__link" href="/">mushmouth.tech</a>
+  </div>
+  <div class="header-menu">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+      <a href="{{ .URL }}" class="header-menu__item{{if $currentPage.HasMenuCurrent " main " . }} active{{end}}">
+        {{ .Name }}
+      </a>
+      {{ else }}
+      <a href="{{ .URL }}" class="header-menu__item{{if $currentPage.HasMenuCurrent " main " . }} active{{end}}">
+        {{ .Name }}
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
 </header>
