@@ -1,0 +1,35 @@
+.article {
+  margin-top: 3rem;
+}
+
+// Blog post or page title
+.article-title {
+  margin-top: 0;
+  color: $heading-color;
+
+  a {
+    color: $heading-color;
+  }
+}
+
+.article-category {
+  display: block;
+  margin: 0;
+  font-size: 1.333rem;
+  font-weight: 300;
+  color: $heading-color;
+}
+
+.article-content {
+  li + li {
+    margin-top: .25rem;
+  }
+}
+
+// Meta data line below post title
+.article-meta {
+  display: block;
+  margin-top: -.5rem;
+  margin-bottom: 1rem;
+  color: $color-gray-600;
+}

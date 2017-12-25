@@ -32,7 +32,9 @@ $brand-danger: #bf5329;
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
 $font-size-base: 16px;
 $line-height-base: 1.6;
-$text-color: #636b6f;
+$text-color: $color-gray-700;
+$text-muted-color: $color-gray-400;
+$heading-color: $color-gray-900;
 
 // Grid breakpoints
 $grid-breakpoint-xs: 0;

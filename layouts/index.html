@@ -9,7 +9,7 @@
 
     <hr>
 
-    <p>"Oh hi, world." - Tommy Wiseau</p>
+    <p>[insert bio and stuff here]</p>
 
     <div class="grid-container grid-container--gutterless welcome-bio-links">
       {{ range .Param "accounts" }}
@@ -25,12 +25,37 @@
         </span>
         {{ end }}
       {{ end }}
+      <span class="welcome-bio-links__link">
+        <img src="/images/friendcode.svg" alt="Nintendo" height="24" style="margin: 0">
+        <p>FC: xxxx-xxxx-xxxx-xxxx</p>
+      </span>
     </div>
   </div>
   <div class="welcome-photo">
     <figure class="welcome-photo__avatar">
-      <img src="https://via.placeholder.com/600x600" alt="mushmouth">
+      <img src="{{ "/images/patrick.jpg" | relURL }}" alt="mushmouth">
     </figure>
+  </div>
+</div>
+<div class="grid-container welcome">
+  <div class="welcome-feed">
+    <div class="welcome-feed-blog">
+      <h1>Latest posts</h1>
+      {{ range first 3 (.Site.Pages.ByPublishDate.Reverse) }}
+        {{ if eq .Section "blog" }}
+          <article class="article">
+            <h2 class="article-title">{{ .Title }}</h2>
+            <time class="article-meta" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "January 2, 2006" }}</time>
+            <p>{{ .Summary }}</p>
+            <p><a href="{{ .Permalink }}">Read more</a></p>
+          </article>
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="welcome-feed-masto">
+      <h1>Latest toots</h1>
+      <p>TODO!</p>
+    </div>
   </div>
 </div>
 {{ end }}

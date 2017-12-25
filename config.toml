@@ -3,9 +3,14 @@ languageCode = "en-us"
 title = "mushmouth.tech"
 
 [[menu.main]]
-  name = "blog"
+  name = "about"
   weight = -110
   identifier = "about"
+  url = "/about/"
+[[menu.main]]
+  name = "blog"
+  weight = -110
+  identifier = "blog"
   url = "/blog/"
 
 [params]
@@ -18,5 +23,6 @@ title = "mushmouth.tech"
     icon = "github"
     url = "https://github.com/themushmouth"
   [[params.accounts]]
-    name = "FC: xxxx-xxxx-xxxx-xxxx"
-    icon = "crosshair"
+    name = "Mastodon"
+    icon = "message-square"
+    url = "https://tiny.tilde.website/@mushmouth"

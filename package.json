@@ -32,5 +32,8 @@
     "postcss-brunch": "^2.1.0",
     "sass-brunch": "github:brunch/sass-brunch",
     "uglify-js-brunch": "^2.10.0"
+  },
+  "dependencies": {
+    "feather-icons": "^4.5.0"
   }
 }

@@ -7,19 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ "/android-touch-icon.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="144x144" href="{{ "/windows-tile-icon.png" | relURL }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}">
+  <link rel="shortcut icon" href="{{ "/favicon.png" | relURL }}">
+
   <link rel="stylesheet" href="{{ "/stylesheets/app.css" | relURL }}" />
 </head>
 
 <body>
-  {{ partial "header.html" . }}
+  <div class="layout">
+    {{ partial "header.html" . }}
 
-  <main role="main" class="main">
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-  </main>
+    <main role="main" class="main">
+      {{ block "main" . }}
+      <!-- The part of the page that begins to differ between templates -->
+      {{ end }}
+    </main>
 
-  {{ partial "footer.html" . }}
+    {{ partial "footer.html" . }}
+  </div>
 
   {{ partial "scripts.html" . }}
 </body>

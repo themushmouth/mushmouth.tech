@@ -9,7 +9,7 @@ exports.files = {
   javascripts: {
     joinTo: {
       'javascripts/app.js': /^app/,
-      'javascripts/vendor.js': /(^bower_components|vendor)[\\/]/,
+      'javascripts/vendor.js': /^(?!app)/, // Files that are not in `app` dir.
     },
   },
   stylesheets: {
