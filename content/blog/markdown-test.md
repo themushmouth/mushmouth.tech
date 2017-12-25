@@ -31,15 +31,15 @@ Most of these elements are styled by browsers with few modifications on our part
 
 Footnotes are supported as part of the Markdown syntax. Here's one in action. Clicking this number[^fn-sample_footnote] will lead you to a footnote. The syntax looks like:
 
-{% highlight text %}
+{{< highlight text >}}
 Clicking this number[^fn-sample_footnote]
-{% endhighlight %}
+{{< /highlight >}}
 
 Each footnote needs the `^fn-` prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:
 
-{% highlight text %}
+{{< highlight text >}}
 [^fn-sample_footnote]: Handy! Now click the return link to go back.
-{% endhighlight %}
+{{< /highlight >}}
 
 You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.
 
