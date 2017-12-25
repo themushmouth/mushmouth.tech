@@ -26,3 +26,6 @@ title = "mushmouth.tech"
     name = "Mastodon"
     icon = "message-square"
     url = "https://tiny.tilde.website/@mushmouth"
+  [[params.accounts]]
+    name = "0123-4567-8901-2345"
+    iconpath = "/images/friendcode.svg"

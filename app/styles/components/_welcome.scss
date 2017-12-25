@@ -13,6 +13,12 @@
 }
 
 .welcome-photo {
+  display: none;
+
+  @media (min-width: $grid-breakpoint-md) {
+    display: block;
+  }
+
   @supports (display: grid) {
     grid-column: span 12;
 
@@ -39,6 +45,7 @@
   &__link {
     display: flex;
     padding: 20px;
+    color: $link-color;
     background-color: #f9f9fa;
 
     &:hover,
