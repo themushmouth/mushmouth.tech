@@ -42,20 +42,22 @@
     <div class="welcome-feed">
       <div class="welcome-feed-blog">
         <h1>Latest posts</h1>
-        {{ range first 3 (.Site.Pages.ByPublishDate.Reverse) }}
-          {{ if eq .Section "blog" }}
-            <article class="article">
-              <h2 class="article-title">{{ .Title }}</h2>
-              <time class="article-meta" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "January 2, 2006" }}</time>
-              <p>{{ .Summary }}</p>
-              <p><a href="{{ .Permalink }}">Read more</a></p>
-            </article>
+        <div class="blog-feed">
+          {{ range first 3 (.Site.Pages.ByPublishDate.Reverse) }}
+            {{ if eq .Section "blog" }}
+              <article class="article">
+                <h2 class="article-title">{{ .Title }}</h2>
+                <time class="article-meta" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "January 2, 2006" }}</time>
+                <p>{{ .Summary }}</p>
+                <p><a href="{{ .Permalink }}">Read more</a></p>
+              </article>
+            {{ end }}
           {{ end }}
-        {{ end }}
+        </div>
       </div>
       <div class="welcome-feed-masto">
         <h1>Latest toots</h1>
-        <div id="masto-feed" class="masto-feed"></div>
+        <div id="masto-feed" class="masto-feed">Loading feed, please wait...</div>
       </div>
     </div>
   </div>

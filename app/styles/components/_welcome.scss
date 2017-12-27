@@ -83,11 +83,26 @@
 
 .welcome-feed-blog,
 .welcome-feed-masto {
+  .blog-feed,
+  .masto-feed {
+    margin-top: 3rem;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
   @supports (display: grid) {
     grid-column: span 12;
 
     @media (min-width: $grid-breakpoint-md) {
       grid-column: span 6;
+    }
+  }
+}
+
+.blog-feed {
+  .article {
+    &:first-of-type {
+      margin-top: 0;
     }
   }
 }
