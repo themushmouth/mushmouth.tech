@@ -8,14 +8,14 @@ HUGO_DEST="/var/www/html"
 echo -e "Deploy started."
 
 # Step 1: `npm install`
-echo -e "\nRunning `npm install`."
+echo -e "\nRunning \`npm install\`."
 npm install
 
 # Test if npm install is successful
 RESULT_NPM=$?
 if [ $RESULT_NPM -ne 0 ]; then
   # Exit if failed
-  echo -e "\nDeployment failed: `npm install` failed."
+  echo -e "\nDeployment failed: \`npm install\` failed."
   exit 1
 fi
 
