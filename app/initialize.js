@@ -5,5 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // bootstrap feather icons
   feather.replace();
 
-  fetchTimeline('https://tiny.tilde.website/users/mushmouth.atom');
+  fetchTimeline('https://tiny.tilde.website/@mushmouth.atom')
+    .then(res => console.log(res.querySelectorAll('entry')));
 });

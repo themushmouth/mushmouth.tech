@@ -1,8 +1,10 @@
-const fetchTimeline = (url) => {
-  fetch(url, { mode: 'no-cors' })
-    .then(res => res.text)
-    .then(str => new DOMParser().parseFromString(str, 'text/xml'))
-    .then(data => console.log(data));
-};
+const fetchTimeline = (url) => fetch(url, {
+  method: 'GET',
+  headers: {
+    Accept: 'application/atom+xml',
+  }
+})
+  .then(res => res.text())
+  .then(str => new DOMParser().parseFromString(str, 'text/xml'));
 
 export default fetchTimeline;
