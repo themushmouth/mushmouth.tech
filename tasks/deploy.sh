@@ -6,7 +6,31 @@
 HUGO_DEST="/var/www/html"
 
 echo -e "Building Hugo site to ${HUGO_DEST}..."
-npm install && npm run build && hugo -d $HUGO_DEST
+
+# Step 1: `npm install`
+npm install
+
+# Test if npm install is successful
+RESULT_NPM=$?
+if [ $RESULT_NPM -ne 0 ]; then
+  # Exit if failed
+  echo -e "\nDeployment failed: `npm install` failed."
+  exit 1
+fi
+
+# Step 1: `npm run build`
+npm run build
+
+# Test if npm run build is successful
+RESULT_NPM_BUILD=$?
+if [ $RESULT_NPM_BUILD -ne 0 ]; then
+  # Exit if failed
+  echo -e "\nDeployment failed: Compiling JS + Assets failed."
+  exit 1
+fi
+
+# Step 3: build Hugo
+hugo -d $HUGO_DEST
 
 # Test if Hugo build is successful
 RESULT_HUGO=$?
