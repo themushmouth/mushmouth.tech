@@ -5,5 +5,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // bootstrap feather icons
   feather.replace();
 
-  fetchTimeline('https://mastodon.social/users/resir014.atom');
+  fetchTimeline('https://tiny.tilde.website/users/mushmouth.atom');
 });

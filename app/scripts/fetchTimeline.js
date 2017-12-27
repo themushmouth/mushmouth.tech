@@ -1,7 +1,7 @@
 const fetchTimeline = (url) => {
-  fetch(url, { mode: 'cors' })
+  fetch(url, { mode: 'no-cors' })
     .then(res => res.text)
-    .then(str => (new DOMParser()).parseFromString(str, 'text/xml'))
+    .then(str => new DOMParser().parseFromString(str, 'text/xml'))
     .then(data => console.log(data));
 };
 

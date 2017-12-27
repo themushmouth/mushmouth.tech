@@ -20,6 +20,7 @@
   "devDependencies": {
     "autoprefixer": "^7.2.3",
     "babel-brunch": "^6.1.1",
+    "babel-eslint": "^8.1.2",
     "babel-preset-env": "^1.6.1",
     "brunch": "^2.10.12",
     "cssnano": "^3.10.0",
