@@ -71,4 +71,4 @@ export default () => {
       // again, pretend this is ReactDOM.render()
       root.innerHTML = markup;
     });
-}
+};
