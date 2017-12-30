@@ -46,3 +46,6 @@ $ npm run build:hugo
 ## License
 
 Source code is licensed under [MIT](LICENSE).
+
+## TODO
+- [ ] Add A Realtime clock next to mushmouth.tech on the header
